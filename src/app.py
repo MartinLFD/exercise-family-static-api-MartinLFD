@@ -42,7 +42,7 @@ def get_member(id):
 
 
 
-@app.route('/members/<int:id>', methods=['DELETE'])
+@app.route('/member/<int:id>', methods=['DELETE'])
 def delete_member(id):
     member = jackson_family.delete_member(id)
     return jsonify(member), 200

@@ -46,15 +46,15 @@ class FamilyStructure:
         for member in self._members:
             if member["id"] == id:
                 self._members.remove(member)
-                return True
-            return "member not deleted"
+                return {"done": True}
+        return {"done": False}
 
     def get_member(self, id):
         # fill this method and update the return
         for member in self._members:
             if member["id"] == id:
                 return member
-            return "member was not found"
+        return {}
 
     # this method is done, it returns a list with all the family members
     def get_all_members(self):
